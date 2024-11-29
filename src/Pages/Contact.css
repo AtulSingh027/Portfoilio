@@ -1,0 +1,80 @@
+
+.contact-container {
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 100px auto 0;
+    padding: 2rem;
+    background-color: #fff29f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contact-info-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-info-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info-icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #606000;
+}
+
+.contact-info-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-label {
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+    letter-spacing: 1px;
+}
+
+.contact-info-value {
+    color: #606000;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-title {
+        font-size: 1.5rem;
+    }
+}
