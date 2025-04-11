@@ -1,13 +1,23 @@
-import React from 'react'
-import { BookOpen, Calendar, MapPin, GraduationCap, Code, Server } from 'lucide-react'
+import React, { useEffect } from 'react';
+import { BookOpen, Calendar, MapPin, GraduationCap, Code, Server } from 'lucide-react';
 
 export default function Education() {
+  // Animation on page load
+  useEffect(() => {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('visible');
+      }, 300 * index);
+    });
+  }, []);
+
   const educationHistory = [
     {
       degree: 'High School',
       institution: 'M.P Board',
       location: 'Bhopal',
-      year: '2015',
+      year: '2020',
       description: 'Established strong academic foundation.',
       icon: <BookOpen size={24} />,
       color: 'amber'
@@ -16,32 +26,23 @@ export default function Education() {
       degree: 'Higher Secondary',
       institution: 'M.P Board',
       location: 'Bhopal',
-      year: '2017',
+      year: '2023',
       description: 'Completed with focus on science and mathematics.',
       icon: <BookOpen size={24} />,
       color: 'green'
     },
     {
-      degree: 'Bachelor of Science',
-      institution: 'Barkatullah University',
-      location: 'Bhopal',
-      year: 'March 2021',
+      degree: 'Bachelor in Computer Applications (BCA)',
+      institution: 'Devi Ahilya Vishwavidyalaya',
+      location: 'Indore',
+      year: 'March 2026',
       description: 'Focused on core scientific principles and analytical thinking.',
       icon: <GraduationCap size={24} />,
       color: 'blue'
     },
     {
-      degree: 'PG Diploma in Advanced Computing (PGDAC)',
-      institution: 'MCNUJC',
-      location: 'Bhopal',
-      year: '2022',
-      description: 'Specialized training in advanced computing concepts including Data Structures, Algorithms, Web Technologies, and Software Development.',
-      icon: <Server size={24} />,
-      color: 'indigo'
-    },
-    {
       degree: 'Web Development Certification',
-      institution: 'The Prime Staps',
+      institution: 'The Prime Step',
       location: 'Indore',
       year: '2024',
       description: 'Comprehensive training in modern web development technologies including HTML5, CSS3, JavaScript, React, and responsive design principles.',
@@ -56,61 +57,65 @@ export default function Education() {
       case 'blue':
         return {
           bg: 'bg-blue-600',
-          light: 'bg-blue-50',
-          text: 'text-blue-600',
-          border: 'border-blue-200',
+          light: 'bg-blue-900/30',
+          text: 'text-blue-400',
+          border: 'border-blue-800',
           timeline: 'border-blue-600'
         };
       case 'green':
         return {
           bg: 'bg-green-600',
-          light: 'bg-green-50',
-          text: 'text-green-600',
-          border: 'border-green-200',
+          light: 'bg-green-900/30',
+          text: 'text-green-400',
+          border: 'border-green-800',
           timeline: 'border-green-600'
         };
       case 'amber':
         return {
           bg: 'bg-amber-600',
-          light: 'bg-amber-50',
-          text: 'text-amber-600',
-          border: 'border-amber-200',
+          light: 'bg-amber-900/30',
+          text: 'text-amber-400',
+          border: 'border-amber-800',
           timeline: 'border-amber-600'
         };
       case 'purple':
         return {
           bg: 'bg-purple-600',
-          light: 'bg-purple-50',
-          text: 'text-purple-600',
-          border: 'border-purple-200',
+          light: 'bg-purple-900/30',
+          text: 'text-purple-400',
+          border: 'border-purple-800',
           timeline: 'border-purple-600'
         };
       case 'indigo':
         return {
           bg: 'bg-indigo-600',
-          light: 'bg-indigo-50',
-          text: 'text-indigo-600',
-          border: 'border-indigo-200',
+          light: 'bg-indigo-900/30',
+          text: 'text-indigo-400',
+          border: 'border-indigo-800',
           timeline: 'border-indigo-600'
         };
       default:
         return {
           bg: 'bg-gray-600',
-          light: 'bg-gray-50',
-          text: 'text-gray-600',
-          border: 'border-gray-200',
+          light: 'bg-gray-800/30',
+          text: 'text-gray-400',
+          border: 'border-gray-700',
           timeline: 'border-gray-600'
         };
     }
   };
 
   return (
-    <div className="bg-slate-100 min-h-screen py-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-900 min-h-screen py-16 text-gray-100">
+      {/* Background elements */}
+      <div className="fixed top-0 right-0 w-1/3 h-screen bg-blue-900/5 rounded-l-full blur-3xl -z-10"></div>
+      <div className="fixed bottom-0 left-0 w-1/3 h-screen bg-purple-900/5 rounded-r-full blur-3xl -z-10"></div>
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">EDUCATION</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-16 fade-in">
+          <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-300 to-blue-500 mb-4">EDUCATION</h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             My academic journey and professional certifications
           </p>
         </div>
@@ -118,7 +123,7 @@ export default function Education() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Timeline Line */}
-          <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
+          <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-gray-700 transform -translate-x-1/2 z-0"></div>
 
           {/* Education Items */}
           <div className="space-y-12">
@@ -127,41 +132,41 @@ export default function Education() {
               const isEven = index % 2 === 0;
 
               return (
-                <div key={index} className="relative">
+                <div key={index} className={`relative timeline-item ${isEven ? 'from-left' : 'from-right'}`}>
                   {/* Timeline dot */}
-                  <div className={`absolute left-0 md:left-1/2 w-5 h-5 rounded-full ${colorClasses.bg} border-4 border-white transform -translate-x-1/2 z-10`}></div>
+                  <div className={`absolute left-0 md:left-1/2 w-5 h-5 rounded-full ${colorClasses.bg} border-4 border-gray-900 transform -translate-x-1/2 z-10 glow`}></div>
                   
                   {/* Content */}
                   <div className={`md:w-1/2 ${isEven ? 'md:pr-12 md:ml-auto' : 'md:pl-12'}`}>
-                    <div className={`bg-white p-6 rounded-lg shadow-md border-l-4 ${colorClasses.border} hover:shadow-lg transition-shadow duration-300`}>
+                    <div className={`bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 ${colorClasses.border} hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group`}>
                       {/* Year badge */}
                       <div className="flex justify-between items-center mb-4">
-                        <div className={`${colorClasses.light} ${colorClasses.text} py-1 px-3 rounded-full flex items-center text-sm font-medium`}>
+                        <div className={`${colorClasses.light} ${colorClasses.text} py-1 px-3 rounded-full flex items-center text-sm font-medium border border-gray-700`}>
                           <Calendar size={16} className="mr-1" />
                           {education.year}
                         </div>
-                        <div className={`${colorClasses.bg} p-2 rounded-full text-white`}>
+                        <div className={`${colorClasses.bg} p-2 rounded-full text-white transform group-hover:rotate-12 transition-transform duration-300`}>
                           {education.icon}
                         </div>
                       </div>
                       
                       {/* Degree */}
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">{education.degree}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">{education.degree}</h3>
                       
                       {/* Institution and Location */}
                       <div className="space-y-2 mb-3">
-                        <div className="flex items-center text-gray-600">
-                          <BookOpen size={18} className="mr-2 text-gray-500" />
+                        <div className="flex items-center text-gray-300">
+                          <BookOpen size={18} className="mr-2 text-gray-400" />
                           <span>{education.institution}</span>
                         </div>
-                        <div className="flex items-center text-gray-600">
-                          <MapPin size={18} className="mr-2 text-gray-500" />
+                        <div className="flex items-center text-gray-300">
+                          <MapPin size={18} className="mr-2 text-gray-400" />
                           <span>{education.location}</span>
                         </div>
                       </div>
                       
                       {/* Description */}
-                      <p className="text-gray-600 mt-2 text-sm">{education.description}</p>
+                      <p className="text-gray-400 mt-2 text-sm">{education.description}</p>
                     </div>
                   </div>
                 </div>
@@ -170,6 +175,51 @@ export default function Education() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-950 py-8 border-t border-gray-800 mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+          <p>© 2025 Deepak Vishwakarma. All rights reserved.</p>
+        </div>
+      </footer>
+
+      {/* CSS for animations */}
+      <style jsx>{`
+        .timeline-item {
+          opacity: 0;
+          transition: all 0.6s ease-out;
+        }
+        
+        .timeline-item.from-left {
+          transform: translateX(-50px);
+        }
+        
+        .timeline-item.from-right {
+          transform: translateX(50px);
+        }
+        
+        .timeline-item.visible {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        
+        .fade-in {
+          opacity: 0;
+          transform: translateY(20px);
+          animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .glow {
+          box-shadow: 0 0 10px currentColor;
+        }
+      `}</style>
     </div>
-  )
+  );
 }

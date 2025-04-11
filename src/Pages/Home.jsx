@@ -1,89 +1,134 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Download, Code, Briefcase, User } from "lucide-react";
-import myimage from "./Media/deepak.png"
+import { ArrowRight, Download, Code, Briefcase, User, ChevronDown } from "lucide-react";
+import myimage from "./Media/MyImage.png";
 
 export default function Home() {
-  
+  // Animation effect for when page loads
+  useEffect(() => {
+    // Animate elements with fade-in class
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add('visible');
+      }, 200 * index);
+    });
+
+    // Animate skill items with slide-up class
+    const slideElements = document.querySelectorAll('.slide-up');
+    slideElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add('visible');
+      }, 100 * (index + 3));
+    });
+  }, []);
+
+  // Smooth scroll to projects section
+  const scrollToProjects = () => {
+    document.getElementById('projects').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  };
 
   return (
-    <div className="bg-slate-100 min-h-screen">
+    
+    <div className="bg-gray-900 min-h-screen text-gray-100">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+        {/* Background gradient circles for visual interest */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-10 translate-x-1/2 translate-y-1/2"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Hero Text */}
-            <div className="md:w-1/2 space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                DEEPAK VISHWAKARMA
+            <div className="md:w-1/2 space-y-6 fade-in">
+              <div className="inline-block px-4 py-1 bg-blue-900/30 rounded-full text-blue-400 font-medium mb-4 border border-blue-700/50">
+              Python Full Stack Developer
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-blue-400">
+                ATUL SINGH THAKUR
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-blue-200">
-              FULL STACK DEVELOPER
-              </h2>
-              <p className="text-lg md:text-xl text-blue-100 max-w-lg">
+              <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
                 Transforming ideas into elegant digital solutions with passion
-                and precision.
+                and precision. Specializing in Python Full Stack development.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-6">
                 <Link
                   to="/Resume"
-                  className="bg-white text-blue-700 hover:bg-blue-50 transition duration-300 font-semibold py-3 px-6 rounded-md shadow-md flex items-center gap-2"
+                  className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 font-semibold py-3 px-6 rounded-md shadow-lg shadow-blue-900/30 flex items-center gap-2 group"
                 >
-                  <Download size={18} />
+                  <Download size={18} className="group-hover:translate-y-0.5 transition-transform duration-300" />
                   RESUME
                 </Link>
-
+                <button
+                  onClick={scrollToProjects}
+                  className="bg-gray-800 text-white hover:bg-gray-700 border border-gray-700 transition-all duration-300 font-semibold py-3 px-6 rounded-md shadow-md flex items-center gap-2 group"
+                >
+                  <ChevronDown size={18} className="group-hover:translate-y-1 transition-transform duration-300" />
+                  VIEW PROJECTS
+                </button>
               </div>
             </div>
 
             {/* Hero Image */}
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <div className="bg-blue-800 rounded-lg border-4 border-blue-300 shadow-xl h-64 md:h-[27rem] flex items-center justify-center">
-                  <img className="h-full w-full" src={myimage} alt="" />
+            <div className="md:w-1/2 fade-in" style={{animationDelay: "300ms"}}>
+              <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-2xl p-2 hover:scale-[1.01] transition-transform duration-500">
+                <div className="overflow-hidden rounded-xl">
+                  <img 
+                    className="w-full h-auto object-cover transform transition-transform hover:scale-105 duration-700" 
+                    src={myimage} 
+                    alt="Deepak Vishwakarma" 
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
+        
+        {/* Subtle divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
       </div>
 
       {/* Skills Section */}
-      <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 className="text-2xl font-bold text-center mb-8 text-gray-800 flex items-center justify-center gap-2">
-          <Code size={24} className="text-blue-600" />
+      <div className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 className="text-2xl font-bold text-center mb-12 text-gray-100 flex items-center justify-center gap-2 fade-in">
+          <Code size={24} className="text-blue-400" />
           MY CORE SKILLS
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center hover:shadow-lg transition duration-300 hover:scale-105 cursor-pointer border-b-4 border-blue-500">
-            <span className="font-semibold text-gray-800">REACT</span>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center hover:shadow-lg transition duration-300 hover:scale-105 cursor-pointer border-b-4 border-yellow-500">
-            <span className="font-semibold text-gray-800">JAVASCRIPT</span>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center hover:shadow-lg transition duration-300 hover:scale-105 cursor-pointer border-b-4 border-cyan-500">
-            <span className="font-semibold text-gray-800">TAILWIND CSS</span>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center hover:shadow-lg transition duration-300 hover:scale-105 cursor-pointer border-b-4 border-purple-500">
-            <span className="font-semibold text-gray-800">BOOTSTRAP</span>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center hover:shadow-lg transition duration-300 hover:scale-105 cursor-pointer border-b-4 border-blue-400">
-            <span className="font-semibold text-gray-800">CSS</span>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center hover:shadow-lg transition duration-300 hover:scale-105 cursor-pointer border-b-4 border-orange-500">
-            <span className="font-semibold text-gray-800">HTML</span>
-          </div>
+          {[
+            { name: "REACT", color: "from-blue-500 to-blue-700", delay: 0 },
+            { name: "JAVASCRIPT", color: "from-yellow-500 to-yellow-700", delay: 1 },
+            { name: "Django", color: "from-cyan-500 to-cyan-700", delay: 2 },
+            { name: "DRF", color: "from-purple-500 to-purple-700", delay: 3 },
+            { name: "REDUXJS", color: "from-blue-400 to-blue-600", delay: 4 },
+            { name: "DSA", color: "from-orange-500 to-orange-700", delay: 5 }
+          ].map((skill, index) => (
+            <div 
+              key={index}
+              className="slide-up bg-gray-800 rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer border border-gray-700"
+              style={{animationDelay: `${skill.delay * 100}ms`}}
+            >
+              <div className={`h-1 w-full bg-gradient-to-r ${skill.color}`}></div>
+              <div className="p-6 flex items-center justify-center">
+                <span className="font-semibold text-gray-200 group-hover:text-white transition-colors duration-300">{skill.name}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* About Section */}
-      <div className="bg-white py-16">
+      <div className="bg-gray-800/50 py-20 fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-800 flex items-center justify-center gap-2">
-            <User size={24} className="text-blue-600" />
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-100 flex items-center justify-center gap-2">
+            <User size={24} className="text-blue-400" />
             ABOUT ME
           </h3>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto text-center leading-relaxed">
-            A passionate developer with a keen eye for creating responsive and
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center leading-relaxed">
+            A passionate Software developer with a keen eye for creating responsive and
             user-friendly web applications. I blend creativity with technical
             expertise to deliver innovative solutions that exceed expectations.
           </p>
@@ -91,49 +136,54 @@ export default function Home() {
       </div>
 
       {/* Recent Projects */}
-      <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 className="text-2xl font-bold text-center mb-8 text-gray-800 flex items-center justify-center gap-2">
-          <Briefcase size={24} className="text-blue-600" />
+      <div id="projects" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+        <h3 className="text-2xl font-bold text-center mb-12 text-gray-100 flex items-center justify-center gap-2">
+          <Briefcase size={24} className="text-blue-400" />
           RECENT PROJECTS
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-              <Code size={48} className="text-white" />
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-700">
+            <div className="h-48 bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <Code size={48} className="text-white transform group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="p-6">
-              <h4 className="text-xl font-bold text-gray-800 mb-2">
+              <h4 className="text-xl font-bold text-gray-100 mb-2">
                 E-COMMERCE PLATFORM
               </h4>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-400 mb-4">
                 Full-stack web application with modern features
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">
+                <span className="bg-blue-900/50 text-blue-300 text-sm font-medium px-2.5 py-0.5 rounded border border-blue-800/50">
                   REACT
                 </span>
-                <span className="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded">
-                  NODE.JS
+                <span className="bg-blue-900/50 text-blue-300 text-sm font-medium px-2.5 py-0.5 rounded border border-blue-800/50">
+                  ReduxJS
+                </span>
+                <span className="bg-green-900/50 text-green-300 text-sm font-medium px-2.5 py-0.5 rounded border border-green-800/50">
+                  DRF
                 </span>
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-              <Briefcase size={48} className="text-white" />
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-700">
+            <div className="h-48 bg-gradient-to-r from-purple-600 to-purple-800 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <Briefcase size={48} className="text-white transform group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="p-6">
-              <h4 className="text-xl font-bold text-gray-800 mb-2">
+              <h4 className="text-xl font-bold text-gray-100 mb-2">
                 TASK MANAGEMENT APP
               </h4>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-400 mb-4">
                 Collaborative productivity tool
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded">
+                <span className="bg-purple-900/50 text-purple-300 text-sm font-medium px-2.5 py-0.5 rounded border border-purple-800/50">
                   REDUX
                 </span>
-                <span className="bg-orange-100 text-orange-800 text-sm font-medium px-2.5 py-0.5 rounded">
+                <span className="bg-orange-900/50 text-orange-300 text-sm font-medium px-2.5 py-0.5 rounded border border-orange-800/50">
                   FIREBASE
                 </span>
               </div>
@@ -141,10 +191,44 @@ export default function Home() {
           </div>
         </div>
       </div>
-        <div className="flex justify-center items-center text-6xl text-red-600 pb-[2rem] font-bold  bg-red-200">
-        <h1>hello my friend</h1>
-        </div>
 
+      {/* Footer */}
+      <footer className="bg-gray-950 py-8 border-t border-gray-800 fade-in">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400">© 2025 Atul singh thakur. All rights reserved.</p>
+          <div className="flex gap-4 mt-4 md:mt-0">
+            <Link to="/Contact" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              Contact
+            </Link>
+            <Link to="/Skills" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              Skills
+            </Link>
+            <Link to="/Education" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              Education
+            </Link>
+          </div>
+        </div>
+      </footer>
+
+      {/* CSS for animations */}
+      <style jsx>{`
+        .fade-in {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .slide-up {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .fade-in.visible, .slide-up.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      `}</style>
     </div>
   );
 }
