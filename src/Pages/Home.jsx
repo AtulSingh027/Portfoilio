@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Download, Code, Briefcase, User } from "lucide-react";
+import myimage from "./Media/deepak.png"
 
 export default function Home() {
   
@@ -38,11 +39,8 @@ export default function Home() {
 
             {/* Hero Image */}
             <div className="md:w-1/2 mt-8 md:mt-0">
-              <div className="bg-blue-800 rounded-lg border-4 border-blue-300 shadow-xl h-64 md:h-96 flex items-center justify-center">
-                <div className="text-center text-blue-300">
-                  <User size={64} />
-                  <p className="mt-4 font-medium">Your Photo Here</p>
-                </div>
+              <div className="bg-blue-800 rounded-lg border-4 border-blue-300 shadow-xl h-64 md:h-[27rem] flex items-center justify-center">
+                  <img className="h-full w-full" src={myimage} alt="" />
               </div>
             </div>
           </div>
@@ -143,6 +141,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+        <div className="flex justify-center items-center text-6xl text-red-600 pb-[2rem] font-bold  bg-red-200">
+        <h1>hello my friend</h1>
+        </div>
+
     </div>
   );
 }

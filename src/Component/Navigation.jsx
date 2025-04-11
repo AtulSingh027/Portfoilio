@@ -63,19 +63,19 @@ export default function Navigation() {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-600">
-            <Link to="/" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
+            <Link to="/" className="text-white hover:bg-blue-700  px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
               <Home size={18} />
               <span>HOME</span>
             </Link>
-            <Link to="/Skills" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
+            <Link to="/Skills" className="text-white hover:bg-blue-700  px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
               <Cpu size={18} />
               <span>SKILLS</span>
             </Link>
-            <Link to="/Contact" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
+            <Link to="/Contact" className="text-white hover:bg-blue-700  px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
               <Mail size={18} />
               <span>CONTACT</span>
             </Link>
-            <Link to="/Education" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
+            <Link to="/Education" className="text-white hover:bg-blue-700  px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
               <GraduationCap size={18} />
               <span>EDUCATION</span>
             </Link>
