@@ -32,7 +32,7 @@ export default function Education() {
       color: 'green'
     },
     {
-      degree: 'Bachelor in Computer Applications (BCA)',
+      degree: 'Bachelor"s in Technology',
       institution: 'Devi Ahilya Vishwavidyalaya',
       location: 'Indore',
       year: 'March 2026',
@@ -179,7 +179,7 @@ export default function Education() {
       {/* Footer */}
       <footer className="bg-gray-950 py-8 border-t border-gray-800 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-          <p>© 2025 Deepak Vishwakarma. All rights reserved.</p>
+          <p>© 2025 Atul Thakur. All rights reserved.</p>
         </div>
       </footer>
 

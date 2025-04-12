@@ -7,13 +7,13 @@ export default function Resume() {
     {
       title: "Professional Summary",
       icon: <User size={20} />,
-      content: "Adept Computer Operator with a proven track record at Management, where I enhanced data quality through meticulous data entry, achieving a significant improvement in data accuracy. Skilled in React js and customer service, I excel in managing complex data systems and responding efficiently to service requests, demonstrating both technical proficiency and exceptional interpersonal abilities."
+      content: "A dedicated and detail-oriented Python Full Stack Developer with a strong foundation in programming languages and web development technologies. Proven ability to manage data effectively and deliver high-quality software solutions. Seeking to leverage skills in a challenging role."
     },
     {
       title: "Education",
       icon: <GraduationCap size={20} />,
       items: [
-        { title: "Bachelor in Compoter Applications", institution: "Devi Ahilya Vishwavidyalaya, Bhopal", date: "March 2026" },
+        { title: "Bachelor in Technology", institution: "Devi Ahilya Vishwavidyalaya, Bhopal", date: "March 2026" },
         { title: "Higher Secondary", institution: "M.P Board, Bhopal", date: "2022" },
         { title: "High School", institution: "M.P Board, Bhopal", date: "2020" }
       ]
@@ -23,13 +23,12 @@ export default function Resume() {
       icon: <Briefcase size={20} />,
       items: [
         {
-          title: "Computer Operator & Management",
-          date: "03/2022 to 07/2024",
+          title: "Aspiring Software Developer",
+          date: "Jan 2024 - Present",
           responsibilities: [
-            "Maintained a high level of accuracy in data entry tasks, resulting in improved overall data quality.",
-            "Maintained spreadsheets of data across multiple systems.",
-            "Generated reports covering details about data, system operation, and error monitoring.",
-            "Processed requests for service from internal and external customers"
+            "Strengthened problem-solving skills by solving 200+ DSA challenges, focusing on optimization and efficiency.",
+            "Architected and applied full-stack development skills in projects like Kisan Track, showcasing practical problem-Solving in agriculture.",
+            "Gained expertise in Django, SQL, React, Tailwind CSS, and front-end technologies to build responsive and dynamic web applications.",
           ]
         }
       ]
@@ -39,8 +38,12 @@ export default function Resume() {
       icon: <Code size={20} />,
       categories: [
         {
+          name: "Ptogramming Languages",
+          skills: ["C", "C++", "Python", "JavaScript"]
+        },
+        {
           name: "Software Skills",
-          skills: ["Daployment", "Data management", "Computer operations management"]
+          skills: ["Deployment", "Data management", "Computer operations management"]
         },
         {
           name: "Web Development",
@@ -48,7 +51,7 @@ export default function Resume() {
         },
         {
           name: "Full Stack Development",
-          skills: ["Django", "Django Rest Framework", "React JS"]
+          skills: ["Django", "Django Rest Framework", "React JS","SQL","REST API"]
         },
         {
           name: "CSS Frameworks",
@@ -214,7 +217,6 @@ export default function Resume() {
                   {section.items.map((item, idx) => (
                     <div key={idx}>
                       <div className="flex justify-between mb-2">
-                        <h3 className="font-semibold text-white">{item.title}</h3>
                         <span className="text-sm text-blue-400">{item.date}</span>
                       </div>
                       <ul className="space-y-2 text-gray-300">

@@ -13,6 +13,18 @@ export default function Skills() {
 
   const skillCategories = [
     {
+      category: "Programming Languages",
+      icon: <Code size={24} />,
+      color: "blue",
+      skills: [
+        { name: "C", level: 80 },
+        { name: "C++", level: 85 },
+        { name: "PYTHON", level: 90 },
+        { name: "JAVASCRIPT", level: 75 },
+    
+      ]
+    },
+    {
       category: "Frontend Technologies",
       icon: <Code size={24} />,
       color: "blue",

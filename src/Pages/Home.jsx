@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Download, Code, Briefcase, User, ChevronDown } from "lucide-react";
-import myimage from "./Media/MyImage.png";
+import myimage from "./Media/ArtImage.png";
 
 export default function Home() {
   // Animation effect for when page loads
@@ -77,7 +77,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-2xl p-2 hover:scale-[1.01] transition-transform duration-500">
                 <div className="overflow-hidden rounded-xl">
                   <img 
-                    className="w-full h-auto object-cover transform transition-transform hover:scale-105 duration-700" 
+                    className="w-full h-[650px] object-cover transform transition-transform hover:scale-105 duration-700" 
                     src={myimage} 
                     alt="Deepak Vishwakarma" 
                   />
@@ -100,8 +100,10 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {[
             { name: "REACT", color: "from-blue-500 to-blue-700", delay: 0 },
+            { name: "PYTHON", color: "from-green-500 to-green-700", delay: 0 },
+            {name : "C++", color: "from-red-500 to-red-700", delay: 0},
             { name: "JAVASCRIPT", color: "from-yellow-500 to-yellow-700", delay: 1 },
-            { name: "Django", color: "from-cyan-500 to-cyan-700", delay: 2 },
+            { name: "DjANGO", color: "from-cyan-500 to-cyan-700", delay: 2 },
             { name: "DRF", color: "from-purple-500 to-purple-700", delay: 3 },
             { name: "REDUXJS", color: "from-blue-400 to-blue-600", delay: 4 },
             { name: "DSA", color: "from-orange-500 to-orange-700", delay: 5 }
