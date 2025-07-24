@@ -39,7 +39,7 @@ export default function Navigation() {
                 <Code className={`h-8 w-8 text-purple-500 transition-all duration-500 transform ${scrolled ? 'rotate-0' : 'rotate-0'} group-hover:rotate-12`} />
               </div>
               <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent font-extrabold">
-                DEV<span className="text-white">FOLIO</span>
+                ATUL<span className="text-white"> THAKUR</span>
               </span>
             </Link>
           </div>
