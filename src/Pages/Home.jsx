@@ -44,14 +44,14 @@ export default function Home() {
             {/* Hero Text */}
             <div className="md:w-1/2 space-y-6 fade-in">
               <div className="inline-block px-4 py-1 bg-blue-900/30 rounded-full text-blue-400 font-medium mb-4 border border-blue-700/50">
-              Python Full Stack Developer
+              Software Developer
               </div>
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-blue-400">
                 ATUL SINGH THAKUR
               </h1>
               <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
                 Transforming ideas into elegant digital solutions with passion
-                and precision. Specializing in Python Full Stack development.
+                and precision. Specializing in Full Stack development.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-6">
@@ -100,6 +100,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {[
             { name: "REACT", color: "from-blue-500 to-blue-700", delay: 0 },
+            {name : "MERN" , color: "from-purple-500 to-purple-700", delay: 0},
             { name: "PYTHON", color: "from-green-500 to-green-700", delay: 0 },
             {name : "C++", color: "from-red-500 to-red-700", delay: 0},
             { name: "JAVASCRIPT", color: "from-yellow-500 to-yellow-700", delay: 1 },
@@ -130,7 +131,7 @@ export default function Home() {
             ABOUT ME
           </h3>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center leading-relaxed">
-            A passionate Software developer with a keen eye for creating responsive and
+            A passionate Software developer with Expierince in builiding scalable and optimized Backends and
             user-friendly web applications. I blend creativity with technical
             expertise to deliver innovative solutions that exceed expectations.
           </p>
@@ -151,10 +152,10 @@ export default function Home() {
             </div>
             <div className="p-6">
               <h4 className="text-xl font-bold text-gray-100 mb-2">
-                E-COMMERCE PLATFORM
+                Social Media App
               </h4>
               <p className="text-gray-400 mb-4">
-                Full-stack web application with modern features
+                Full-stack web application with modern features Like Insta including Reels and Chats
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-blue-900/50 text-blue-300 text-sm font-medium px-2.5 py-0.5 rounded border border-blue-800/50">
@@ -164,7 +165,10 @@ export default function Home() {
                   ReduxJS
                 </span>
                 <span className="bg-green-900/50 text-green-300 text-sm font-medium px-2.5 py-0.5 rounded border border-green-800/50">
-                  DRF
+                  NodeJS+Express
+                </span>
+                 <span className="bg-green-900/50 text-green-300 text-sm font-medium px-2.5 py-0.5 rounded border border-green-800/50">
+                  SQL
                 </span>
               </div>
             </div>
@@ -176,17 +180,45 @@ export default function Home() {
             </div>
             <div className="p-6">
               <h4 className="text-xl font-bold text-gray-100 mb-2">
-                TASK MANAGEMENT APP
+                Edusoul
               </h4>
               <p className="text-gray-400 mb-4">
-                Collaborative productivity tool
+                An educational platform for online learning with course management and user interaction features.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-purple-900/50 text-purple-300 text-sm font-medium px-2.5 py-0.5 rounded border border-purple-800/50">
-                  REDUX
+                  TypeScript
                 </span>
                 <span className="bg-orange-900/50 text-orange-300 text-sm font-medium px-2.5 py-0.5 rounded border border-orange-800/50">
-                  FIREBASE
+                  Django+DRF
+                </span> 
+                <span className="bg-orange-900/50 text-orange-300 text-sm font-medium px-2.5 py-0.5 rounded border border-orange-800/50">
+                  MongoDB
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-700">
+            <div className="h-48 bg-gradient-to-r from-purple-600 to-purple-800 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <Briefcase size={48} className="text-white transform group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div className="p-6">
+              <h4 className="text-xl font-bold text-gray-100 mb-2">
+                KisanTrack
+              </h4>
+              <p className="text-gray-400 mb-4">
+                A comprehensive platform for farmers to manage crops, track yields, and access agricultural resources.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-purple-900/50 text-purple-300 text-sm font-medium px-2.5 py-0.5 rounded border border-purple-800/50">
+                  React
+                </span>
+                <span className="bg-orange-900/50 text-orange-300 text-sm font-medium px-2.5 py-0.5 rounded border border-orange-800/50">
+                  Django+DRF
+                </span> 
+                <span className="bg-orange-900/50 text-orange-300 text-sm font-medium px-2.5 py-0.5 rounded border border-orange-800/50">
+                  SQL
                 </span>
               </div>
             </div>

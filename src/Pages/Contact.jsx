@@ -22,16 +22,16 @@ export default function Contact() {
         },
         {
             label: 'WhatsApp',
-            value: '+91 8435399230',
+            value: '+91 84xxxxxx30',
             icon: <MessageCircle className="w-6 h-6" />,
-            link: 'https://wa.me/+918435399230',
+            link: 'https://wa.me/+9184xxxxxxx30',
             color: 'from-green-600 to-green-400'
         },
         {
             label: 'Phone',
-            value: '+91 8435399230',
+            value: '+91 84xxxxxx30',
             icon: <Phone className="w-6 h-6" />,
-            link: 'tel:+918435399230',
+            link: 'tel:+9184xxxxxx30',
             color: 'from-purple-600 to-purple-400'
         },
         {

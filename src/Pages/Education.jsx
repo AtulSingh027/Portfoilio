@@ -32,7 +32,7 @@ export default function Education() {
       color: 'green'
     },
     {
-      degree: 'Bachelor"s in Technology',
+      degree: 'Bachelor in Technology',
       institution: 'Devi Ahilya Vishwavidyalaya',
       location: 'Indore',
       year: 'March 2026',
@@ -41,7 +41,7 @@ export default function Education() {
       color: 'blue'
     },
     {
-      degree: 'Web Development Certification',
+      degree: 'Software Development Certification',
       institution: 'The Prime Step',
       location: 'Indore',
       year: '2024',

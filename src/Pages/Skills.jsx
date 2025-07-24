@@ -30,6 +30,7 @@ export default function Skills() {
       color: "blue",
       skills: [
         { name: "REACT", level: 90 },
+        {name :"TypeScript", level: 70},
         { name: "JAVASCRIPT", level: 85 },
         { name: "HTML", level: 95 },
         { name: "CSS", level: 90 },
@@ -55,6 +56,10 @@ export default function Skills() {
       skills: [
         { name: "DJANGO", level: 85 },
         { name: "DJANGO REST FRAMEWORK", level: 75 },
+        { name: "NODE JS", level: 80 },
+        { name: "EXPRESS JS", level: 70 },
+        { name: "MONGODB", level: 80 },
+        { name: "MICROSERVICE", level: 75 },
         { name: "REST API", level: 80 },
         { name: "SQL", level: 80 }
       ]
@@ -66,17 +71,20 @@ export default function Skills() {
       skills: [
         { name: "VS Code", level: 90 },
         { name: "POSTMAN", level: 60 },
-        { name: "AWS", level: 50 }
+        { name: "AWS", level: 50 },
+        { name: "DOCKER", level: 70 },
+        { name: "GIT", level: 80 },
+        { name: "GITHUB", level: 85 }
       ]
     },
     {
-      category: "Other Technologies",
+      category: "Computer Science Fundamentals",
       icon: <Briefcase size={24} />,
       color: "cyan",
       skills: [
-        { name: "GIT", level: 75 },
-        { name: "GITHUB", level: 80 },
-        { name: "RESPONSIVE DESIGN", level: 90 }
+        { name: "Operating System", level: 75 },
+        { name: "DBMS", level: 80 },
+        { name: "Computer Networks", level: 90 }
       ]
     }
   ];

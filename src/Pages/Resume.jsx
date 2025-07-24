@@ -7,13 +7,13 @@ export default function Resume() {
     {
       title: "Professional Summary",
       icon: <User size={20} />,
-      content: "A dedicated and detail-oriented Python Full Stack Developer with a strong foundation in programming languages and web development technologies. Proven ability to manage data effectively and deliver high-quality software solutions. Seeking to leverage skills in a challenging role."
+      content: "A dedicated and detail-oriented Software Developer with a strong foundation in programming languages and web development technologies. Proven ability to manage data effectively and deliver high-quality software solutions. Seeking to leverage skills in a challenging role."
     },
     {
       title: "Education",
       icon: <GraduationCap size={20} />,
       items: [
-        { title: "Bachelor in Technology", institution: "Devi Ahilya Vishwavidyalaya, Bhopal", date: "March 2026" },
+        { title: "Bachelor's in Technology", institution: "Devi Ahilya Vishwavidyalaya, Bhopal", date: "March 2026" },
         { title: "Higher Secondary", institution: "M.P Board, Bhopal", date: "2022" },
         { title: "High School", institution: "M.P Board, Bhopal", date: "2020" }
       ]
@@ -23,12 +23,12 @@ export default function Resume() {
       icon: <Briefcase size={20} />,
       items: [
         {
-          title: "Aspiring Software Developer",
+          title: "Software Developer",
           date: "Jan 2024 - Present",
           responsibilities: [
             "Strengthened problem-solving skills by solving 200+ DSA challenges, focusing on optimization and efficiency.",
             "Architected and applied full-stack development skills in projects like Kisan Track, showcasing practical problem-Solving in agriculture.",
-            "Gained expertise in Django, SQL, React, Tailwind CSS, and front-end technologies to build responsive and dynamic web applications.",
+            "Gained expertise in Django+NodeJS, SQL, React, Tailwind CSS, and front-end technologies to build responsive and dynamic web applications.",
           ]
         }
       ]
@@ -46,16 +46,16 @@ export default function Resume() {
           skills: ["Deployment", "Data management", "Computer operations management"]
         },
         {
-          name: "Web Development",
-          skills: ["React JS", "JavaScript", "HTML", "CSS", "Django", "Django Rest Framework"]
+          name: "Frontend Technologies",
+          skills: ["React JS","TypeScript","JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap"]
         },
         {
-          name: "Full Stack Development",
-          skills: ["Django", "Django Rest Framework", "React JS","SQL","REST API"]
+          name: "Backend Development",
+          skills: ["Django", "Django Rest Framework","NodeJs","Express","MongoDB","SQL","REST API","Microservices"]
         },
         {
-          name: "CSS Frameworks",
-          skills: ["Tailwind CSS", "Bootstrap"]
+          name: "Developer Tools",
+          skills: ["VS Code", "Postman", "AWS", "Docker", "Git", "GitHub"]
         }
       ]
     },
@@ -64,14 +64,14 @@ export default function Resume() {
       icon: <FolderOpen size={20} />,
       items: [
         { 
-          title: "E-commerce – Food Order",
+          title: "Social Media App",
           link: "#",
-          description: "A full-stack food ordering platform built with MERN stack." 
+          description: "A full-stack social media application with user authentication, post creation, and real-time updates." 
         },
         { 
-          title: "Personal Portfolio",
+          title: "Edusoul",
           link: "#",
-          description: "A responsive portfolio website showcasing skills and projects."
+          description: "An educational platform for online learning with course management and user interaction features."
         },
         { 
           title: "Hospital Management System",
@@ -125,7 +125,7 @@ export default function Resume() {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500"></div>
           
           <h1 className="text-4xl font-bold text-center text-white mb-4">ATUL THAKUR</h1>
-          <p className="text-center text-blue-400 font-medium mb-6">Python Full Stack Developer</p>
+          <p className="text-center text-blue-400 font-medium mb-6">Full Stack Developer</p>
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-gray-300 text-sm mb-6">
             <div className="flex items-center">
@@ -134,7 +134,7 @@ export default function Resume() {
             </div>
             <div className="flex items-center">
               <Phone size={16} className="mr-1 text-blue-400" />
-              <span>+91 8435399230</span>
+              <span>+91 84xxxxxx90</span>
             </div>
             <div className="flex items-center">
               <Mail size={16} className="mr-1 text-blue-400" />
